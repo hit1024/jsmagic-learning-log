@@ -12,10 +12,7 @@
 ### 求解答
 1. 测试数据分别是 {} 和 {'0': 1, '1': 2} 所以可以取巧定义只接收两个参数的函数。
         
-        const constructor = function(a, b) {
-            this.a = a;
-            this.b = b;
-        };
+{% gist 52d396098b9bf78aec24f0ea9f895af3 jsmagic-demo_code-part1.js %}
 
     假如要同时支持变长的参数，参数个数可以是两个、三个或者多个，该如何处理传参？比如：
         
