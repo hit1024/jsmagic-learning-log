@@ -29,6 +29,3 @@
 
 2. 第二个测试“Implement Instance Methods”里面第二项，“should not define `initialize` as a method”，为什么呢？
 
-<script src="https://gist.github.com/hit1024/52d396098b9bf78aec24f0ea9f895af3.js"></script>
-{% gist 52d396098b9bf78aec24f0ea9f895af3 jsmagic-demo_code-part1.js %}
-
