@@ -13,45 +13,50 @@
 假设，一开始有一个对象 obj_origin，它有个方法 func，那么：
 
 1. 首先是参数的初始化：
-    > &gt; const obj_origin = { name: "howard" };
-    > undefined
-    > &gt; obj_origin.func = function(){console.log(`hello, my name is ${this.name}`);}
-    > [Function]
+
+        $ node
+        > const obj_origin = { name: "howard" };
+        undefined
+        > obj_origin.func = function(){console.log(`hello, my name is ${this.name}`);}
+        [Function]
 
 2. 当调用 `obj_origin.func()` 时，func 内部的 this 就是指向类的实体—— obj_origin。
 3. 执行 `demo = obj_origin.func`，demo 是什么呢？node 中执行 `demo.toString()`
 
-    > &gt; demo = obj_origin.func
-    > [Function]
-    > &gt; demo.toString()
-    > 'function (){console.log(`hello, my name is ${this.name}`);}'
-    > &gt; demo()
-    > hello, my name is undefined
-    > undefined
+        $ node
+        > demo = obj_origin.func
+        [Function]
+        > demo.toString()
+        'function (){console.log(`hello, my name is ${this.name}`);}'
+        > demo()
+        hello, my name is undefined
+        undefined
     
 4. bind 是函数对象的一个方法，我们执行一下 `demo.bind(obj_origin)` 看看：
 
-    > &gt; obj_test = demo.bind(obj_origin)
-    > [Function: bound ]
-    > &gt; obj_test.toString()
-    > 'function () { [native code] }'
-    > &gt; obj_test()
-    > hello, my name is howard
-    > undefined
-    > // 查了一下为什么会出现 [`function () { [native code] }`][1]，看完还是不懂，js 嘛，哈哈哈。bound 是啥？可能是个内建函数吧。
+        $ node
+        > obj_test = demo.bind(obj_origin)
+        [Function: bound ]
+        > obj_test.toString()
+        'function () { [native code] }'
+        > obj_test()
+        hello, my name is howard
+        undefined
+        // 查了一下为什么会出现 [`function () { [native code] }`][1]，看完还是不懂，js 嘛，哈哈哈。bound 是啥？可能是个内建函数吧。
     
 5. 来看看 call 吧：
 
-    > &gt; obj_origin.func.call(obj_origin)
-    > hello, my name is howard
-    > undefined
-    > &gt; demo.call(obj_origin)
-    > hello, my name is howard
-    > undefined
-    > &gt; obj_origin.func.call(obj_test)
-    > hello, my name is bound
-    > undefined
-    // Hello, bound, nice to see you again, how do you do?
+        $ node
+        > obj_origin.func.call(obj_origin)
+        hello, my name is howard
+        undefined
+        > demo.call(obj_origin)
+        hello, my name is howard
+        undefined
+        > obj_origin.func.call(obj_test)
+        hello, my name is bound
+        undefined
+        // Hello, bound, nice to see you again, how do you do?
 
 
 
