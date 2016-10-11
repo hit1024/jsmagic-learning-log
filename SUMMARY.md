@@ -6,3 +6,4 @@
 * [1.3 create-npm-package 创建一个 NPM 包](hello-npm/create-npm-package.md)
 * [1.4 setup-mocha 单元测试](hello-npm/setup-mocha.md)
 * [2.1 diy-lodash-function-utilities 实现 Lodash 的工具函数](diy-lodash/diy-lodash-function-utilities.md)
+* [2.2 what-is-this 什么是 this？](diy-lodash/what-is-this.md)
