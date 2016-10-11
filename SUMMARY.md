@@ -7,3 +7,4 @@
 * [1.4 setup-mocha 单元测试](hello-npm/setup-mocha.md)
 * [2.1 diy-lodash-function-utilities 实现 Lodash 的工具函数](diy-lodash/diy-lodash-function-utilities.md)
 * [2.2 what-is-this 什么是 this？](diy-lodash/what-is-this.md)
+* [3.1 class-constructor 没有继承的类系统](class-constructor/class-constructor.md)
