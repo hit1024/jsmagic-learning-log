@@ -8,3 +8,5 @@
 * [2.1 diy-lodash-function-utilities 实现 Lodash 的工具函数](diy-lodash/diy-lodash-function-utilities.md)
 * [2.2 what-is-this 什么是 this？](diy-lodash/what-is-this.md)
 * [3.1 class-constructor 没有继承的类系统](class-constructor/class-constructor.md)
+* [3.2 prototype-chain 原型链](class-constructor/prototype-chain.md)
+* [3.3 class-inheritance 类继承](class-constructor/class-inheritance.md)
